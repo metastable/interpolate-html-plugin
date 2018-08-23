@@ -27,7 +27,7 @@ class InterpolateHtmlPlugin {
         !tapped++ &&
         compilation.hooks.htmlWebpackPluginBeforeHtmlProcessing !== undefined
       ) {
-        compilation.hooks.htmlWebpackPluginBeforeHtmlProcessing.tap(
+        compilation.hooks.htmlWebpackPluginBeforeHtmlProcessing.tapAsync(
           "InterpolateHtmlPlugin",
           (data, callback) => {
             // Run HTML through a series of user-specified string replacements.
